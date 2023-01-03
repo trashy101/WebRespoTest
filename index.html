@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <!--Vexflow-->
+    <script src="https://cdn.jsdelivr.net/npm/vexflow@4.0.3/build/cjs/vexflow.js"></script>
+    <title>Web Piano</title>
+</head>
+
+<h1>
+    Piano Magic
+</h1>
+<body>
+    <div class="piano">
+        <div data-note="C" class="key white">
+            C
+        </div>
+        <div data-note="C#" class="key black">
+            C#
+        </div>
+        <div data-note="D" class="white key">
+            D
+        </div>
+        <div data-note="D#" class="black key">
+            D#
+        </div>
+        <div data-note="E" class="white key">
+            E
+        </div>
+        <div data-note="F" class="white key">
+            F
+        </div>
+        <div data-note="F#" class="black key">
+            F#
+        </div>
+        <div data-note="G" class="white key">
+            G
+        </div>
+        <div data-note="G#" class="black key">
+            G#
+        </div>
+        <div data-note="A" class="white key">
+            A
+        </div>
+        <div data-note="A#" class="black key">
+            A#
+        </div>
+        <div data-note="H" class="white key">
+            H
+        </div>
+      </div>
+    
+      <audio id="C" src="notesound/notes_C.mp3"></audio>
+      <audio id="C#" src="notesound/notes_Csharp.mp3"></audio>
+      <audio id="D" src="notesound/notes_D.mp3"></audio>
+      <audio id="D#" src="notesound/notes_Dsharp.mp3"></audio>
+      <audio id="E" src="notesound/notes_E.mp3"></audio>
+      <audio id="F" src="notesound/notes_F.mp3"></audio>
+      <audio id="F#" src="notesound/notes_Fsharp.mp3"></audio>
+      <audio id="G" src="notesound/notes_G.mp3"></audio>
+      <audio id="G#" src="notesound/notes_Gsharp.mp3"></audio>
+      <audio id="A" src="notesound/notes_A.mp3"></audio>
+      <audio id="A#" src="notesound/notes_Asharp.mp3"></audio>
+      <audio id="H" src="notesound/notes_H.mp3"></audio>
+      
+      <div class="optionfield">
+        <label for="duration"><b>Choose a duration:</b></label>
+        <select class="durationButton" name="duration" id="durationOption">
+            <optgroup>
+                <option value='w' selected="selected">whole</option>
+                <option value='q'>quarter</option>
+                <option value='8'>eighth</option>
+                <option value='16'>sixteenth</option>
+                <option value='32'>thirty-second</option>
+            </optgroup>
+        </select> 
+      </div>
+      
+      <div class="textfields">
+        <label for="num_beats"><b>number of beats:</b></label>
+        <input class="numberField" type="number" id="num_beats" value="8">
+        <label class="beat_value" for="beat_value"><b>value of beats:</b></label>
+        <input class="valueField" type="number" id="beat_value" value="4">
+      </div>
+
+      <div class="buttons">
+        <button class="resetButton" type="button" id="reset">Reset Sheet</button> 
+      </div>
+
+</body>
+
+<footer>
+    <div id="output">
+    </div>
+</footer>
+
+</html>

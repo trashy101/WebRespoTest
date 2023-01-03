@@ -1,0 +1,117 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    animation-duration: 1s;
+    text-shadow: 1px 1px 1px #333;
+    font-family: Garamond;
+    font-size: 40px;
+}
+
+body {
+    background-color: #A7C7E7;
+    margin: 0;
+    min-height: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.piano {
+    display: flex;
+}
+
+.key {
+    height: calc(var(--width) * 4);
+    width: var(--width);
+}
+
+.white {
+    --width: 100px;
+    background-color: #F5F5F5;
+    border: 1px solid black;
+    text-align: center;
+    text-decoration: black;
+    line-height:700px;
+}
+
+.white.active {
+    background-color: #CCC;
+}
+
+.black {
+    --width: 60px;
+    background-color: #0e1111;
+    margin-left: calc(var(--width) / -2);
+    margin-right: calc(var(--width) / -2);
+    z-index: 2;
+    color: white;
+    text-align: center;
+    vertical-align: bottom;
+    line-height: 400px;
+}
+
+.black.active {
+    background-color: #333;
+}
+
+.optionfield {
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+optgroup {
+    font-size: 20px;
+}
+
+.durationButton {
+    height: 35px;
+    width: 150px;
+    font-size: 18px;
+}
+
+.textfields {
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    padding: 5px;
+}
+
+.beat_value {
+    margin-left: 30px;
+}
+
+.numberField {
+    height: 30px;
+    width: 55px;
+    font-size: 16px;
+}
+
+.valueField {
+    height: 30px;
+    width: 55px;
+    font-size: 16px;
+}
+
+.resetButton {
+    height: 50px;
+    width: 150px;
+    font-size: 20px;
+    font-family: Tahoma, sans-serif;
+    padding: 5px;
+}
+
+footer {
+    background-color: white;
+    margin: 0;
+    height: 90%;
+    display: inline;
+    justify-content: left;
+    align-items: left;
+    padding: 5px;
+    width: 700px;
+
+}
