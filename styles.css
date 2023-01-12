@@ -4,10 +4,9 @@
 
 h1 {
     text-align: center;
-    animation-duration: 1s;
     text-shadow: 1px 1px 1px #333;
     font-family: Garamond;
-    font-size: 40px;
+    font-size: 5vw;
 }
 
 body {
@@ -21,6 +20,7 @@ body {
 
 .piano {
     display: flex;
+    width: 100%;
 }
 
 .key {
@@ -62,10 +62,11 @@ body {
     font-family: Arial, sans-serif;
     padding: 5px;
     margin-top: 20px;
+    width: 50%;
 }
 
 optgroup {
-    font-size: 20px;
+    font-size: 100%;
 }
 
 .durationButton {
@@ -78,6 +79,7 @@ optgroup {
     font-size: 20px;
     font-family: Arial, sans-serif;
     padding: 5px;
+    width: 70%;
 }
 
 .beat_value {
@@ -112,6 +114,5 @@ footer {
     justify-content: left;
     align-items: left;
     padding: 5px;
-    width: 700px;
-
+    width: 100%;
 }

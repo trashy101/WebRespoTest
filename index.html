@@ -11,10 +11,12 @@
     <title>Web Piano</title>
 </head>
 
+<!--Title-->
 <h1>
     Piano Magic
 </h1>
 <body>
+    <!--Piano keys-->
     <div class="piano">
         <div data-note="C" class="key white">
             C
@@ -54,6 +56,7 @@
         </div>
       </div>
     
+      <!--Audio Tags for piano keys-->
       <audio id="C" src="notesound/notes_C.mp3"></audio>
       <audio id="C#" src="notesound/notes_Csharp.mp3"></audio>
       <audio id="D" src="notesound/notes_D.mp3"></audio>
@@ -67,6 +70,7 @@
       <audio id="A#" src="notesound/notes_Asharp.mp3"></audio>
       <audio id="H" src="notesound/notes_H.mp3"></audio>
       
+      <!--Optionfield for selection of note type-->
       <div class="optionfield">
         <label for="duration"><b>Choose a duration:</b></label>
         <select class="durationButton" name="duration" id="durationOption">
@@ -80,6 +84,7 @@
         </select> 
       </div>
       
+      <!--Textfields for selection of number of notes and note value-->
       <div class="textfields">
         <label for="num_beats"><b>number of beats:</b></label>
         <input class="numberField" type="number" id="num_beats" value="8">
@@ -87,12 +92,14 @@
         <input class="valueField" type="number" id="beat_value" value="4">
       </div>
 
+      <!--Reset button for note sheet-->
       <div class="buttons">
         <button class="resetButton" type="button" id="reset">Reset Sheet</button> 
       </div>
 
 </body>
 
+<!--Notesheet via Vexflow-->
 <footer>
     <div id="output">
     </div>

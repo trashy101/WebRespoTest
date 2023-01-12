@@ -1,4 +1,4 @@
-//Tastatur-Teil:
+//Piano part:
 
 const WHITE_KEYS = ['a', 's', 'd', 'f', 'g', 'h', 'j']
 const BLACK_KEYS = ['w', 'e', 't', 'z', 'u']
@@ -7,8 +7,7 @@ const keys = document.querySelectorAll('.key')
 const whiteKeys = document.querySelectorAll('.key.white')
 const blackKeys = document.querySelectorAll('.key.black')
 
-// Noten mit Tastatur abspielen
-
+//Play keys with keyboard
 document.addEventListener('keydown', e => {
     if (e.repeat) return
     const key = e.key
@@ -19,8 +18,7 @@ document.addEventListener('keydown', e => {
     if (blackKeyIndex > -1) playNote(blackKeys[blackKeyIndex])
 })
 
-// Funktion, um Noten mit Ton abzuspielen
-
+//Play the audiofile for the played key
 function playNote(key) {
     const noteAudio = document.getElementById(key.dataset.note)
     noteAudio.currentTime = 0
@@ -31,12 +29,13 @@ function playNote(key) {
     })
 }
 
-//Button-Teil:
+//Button part:
 var durationOption = document.getElementById("durationOption");
 var durationValue = durationOption.value;
 var num_beatsValue = document.getElementById('num_beats').value;
 var beat_valueValue = document.getElementById('beat_value').value;
 
+//Reset note sheet by creating a new one over the older one
 document.getElementById('reset').onclick = function() {
   context.rect(0,0,695,110,{ stroke: 'none', fill: 'white' });
   stave = new Stave(0, 0, 690);
@@ -50,7 +49,7 @@ document.getElementById('reset').onclick = function() {
 }
 
 
-//Notenblatt-Teil (via Vexflow):
+//Note Sheet part (via Vexflow):
 
 const {Accidental, Renderer, Stave, StaveNote, Voice, Formatter } = Vex.Flow;
 
@@ -70,10 +69,9 @@ stave.addClef("treble");
 // Connect it to the rendering context and draw!
 stave.setContext(context).draw();
 
-
-//Einzelne Noten aufs Notenblatt schreiben
 var notes = []
 
+//Write single notes on the note sheet
 document.addEventListener('keydown', e => {
 
   var voiceChange = new Voice({
